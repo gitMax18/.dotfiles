@@ -13,8 +13,8 @@
           "type": "root"
         },
         {
-          "background": "#b4befe",
-          "foreground": "#100e23",
+          "background": "#89b4fa",
+          "foreground": "#1e1e2e",
           "powerline_symbol": "\ue0b0",
           "style": "powerline",
           "template": " {{ .UserName }}@{{ .HostName }} ",
@@ -22,7 +22,7 @@
         },
         {
           "background": "#f2cdcd",
-          "foreground": "#100e23",
+          "foreground": "#1e1e2e",
           "powerline_symbol": "\ue0b0",
           "properties": {
             "folder_icon": "\uf115",
@@ -35,7 +35,7 @@
         },
         {
           "background": "#a5e2a1",
-          "foreground": "#193549",
+          "foreground": "#1e1e2e",
           "powerline_symbol": "\ue0b0",
           "style": "powerline",
           "template": " {{ .HEAD }} ",
@@ -43,7 +43,7 @@
         },
         {
           "background": "#f38ba8",
-          "foreground": "#100e23",
+          "foreground": "#1e1e2e",
           "powerline_symbol": "\ue0b0",
           "style": "powerline",
           "template": " \ue235 {{ if .Error }}{{ .Error }}{{ else }}{{ if .Venv }}{{ .Venv }} {{ end }}{{ .Full }}{{ end }} ",
