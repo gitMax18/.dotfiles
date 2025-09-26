@@ -46,6 +46,7 @@
 #pulseaudio,
 #cpu,
 #memory,
+#network,
 #custom-lock,
 #custom-power {
   background-color: @surface0;
@@ -73,6 +74,10 @@
 
 #backlight {
   color: @yellow;
+}
+
+#network {
+  color : @teal;
 }
 
 #memory,

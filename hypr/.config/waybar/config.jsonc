@@ -9,7 +9,7 @@
     // Choose the order of the modules
     "modules-left": ["hyprland/workspaces"],
     "modules-center": ["custom/music"],
-    "modules-right": ["pulseaudio", "memory", "cpu", "battery", "clock", "tray", "custom/lock", "custom/power"],
+    "modules-right": ["pulseaudio", "memory", "cpu", "battery", "network", "clock", "tray", "custom/lock" ,"custom/power"],
     "hyprland/workspaces": {
          "disable-scroll": true,
          "sort-by-name": true,
@@ -22,10 +22,10 @@
            "*": [1,2]
          }
      },
-    // "tray": {
-    //     "icon-size": 21,
-    //     "spacing": 0
-    // },
+    "tray": {
+        "icon-size": 20,
+        "spacing": 0
+    },
     "custom/music": {
         "format": "  {}", "escape": true,
         "interval": 5,
@@ -35,7 +35,7 @@
         "max-length": 50
     },
     "clock": {
-        "timezone": "Pacific/Noumea",
+        "timezone": "Asia/Bangkok",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
         "format-alt": " {:%d/%m/%Y}",
         "format": " {:%H:%M}"
@@ -47,6 +47,19 @@
     "memory" : {
       "interval" : 7,
       "format" : " {percentage}%",
+    },
+    "network": {
+        // "interface": "wlp2s0",
+        "format": "{ifname}",
+        "format-wifi": "{essid} ",
+        "format-ethernet": "{ipaddr} 󰊗",
+        "format-disconnected": "e4e2", 
+        "tooltip-format": "{ifname} via {gwaddr} 󰊗",
+        "tooltip-format-wifi": "{essid} ({signalStrength}%) ",
+        "tooltip-format-ethernet": "{ifname} ",
+        "tooltip-format-disconnected": "Disconnected",
+        "max-length": 100,
+        "on-click" : "nm-connection-editor"
     },
     "battery": {
         "states": {
@@ -69,6 +82,28 @@
         },
         "on-click": "pavucontrol"
     },
+      "privacy": {
+      	"icon-spacing": 4,
+      	"icon-size": 18,
+      	"transition-duration": 250,
+      	"modules": [
+      		{
+      			"type": "screenshare",
+      			"tooltip": true,
+      			"tooltip-icon-size": 24
+      		},
+      		{
+      			"type": "audio-out",
+      			"tooltip": true,
+      			"tooltip-icon-size": 24
+      		},
+      		{
+      			"type": "audio-in",
+      			"tooltip": true,
+      			"tooltip-icon-size": 24
+      		}
+      	]
+      },
     "custom/lock": {
         "tooltip": false,
         "on-click": "hyprlock",
